@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>F*ck This Image</title>
+  <meta name="description" content="Destrua a qualidade das suas imagens e GIFs. Memes ficam mais engraçados em 144p.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💩</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bangers&family=Creepster&family=Monoton&family=Pacifico&family=Press+Start+2P&family=Rubik+Glitch&family=UnifrakturMaguntia&family=VT323&family=Lobster&family=Rye&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+
+    <marquee class="top-marquee" scrollamount="6">
+      ★ BEM-VINDO AO SITE MAIS DESTRUIDOR DA INTERNET ★ AGORA COM SUPORTE A GIF!!! ★ MEMES EM 4K SÃO PROIBIDOS AQUI ★ ADICIONE AOS FAVORITOS (CTRL+D) ★
+    </marquee>
+
+    <header class="header">
+      <h1 id="title" class="title" aria-label="F*ck This Image"></h1>
+      <p class="subtitle"><span class="blink">NEW!</span> O destruidor de JPEG oficial da internet desde 2003 <span class="blink">NEW!</span></p>
+    </header>
+
+    <table class="layout" role="presentation">
+      <tr>
+        <td class="sidebar">
+          <div class="box">
+            <div class="box-title">:: MENU ::</div>
+            <ul class="menu">
+              <li><a href="#upload">» Destruir imagem</a></li>
+              <li><a href="#faq">» FAQ</a></li>
+              <li><a href="#" onclick="alert('O livro de visitas está em manutenção desde 2004. Volte sempre!');return false;">» Livro de visitas</a></li>
+              <li><a href="#" onclick="alert('Você é o visitante número 1.000.000!!! Clique OK para receber seu prêmio.\n\n...brincadeira.');return false;">» Prêmios</a></li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <div class="box-title">:: VISITANTES ::</div>
+            <div class="counter" id="counter">000000</div>
+          </div>
+
+          <div class="box">
+            <div class="box-title">:: WEBMASTER ::</div>
+            <ul class="menu">
+              <li><a href="https://github.com/viniciusNoleto" target="_blank" rel="noopener">» 💾 GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/vin%C3%ADcius-nol%C3%AAto-de-ara%C3%BAjo/" target="_blank" rel="noopener">» 💼 LinkedIn</a></li>
+            </ul>
+          </div>
+
+          <div class="box center">
+            <div class="construction">🚧 EM CONSTRUÇÃO 🚧</div>
+          </div>
+
+          <div class="box center small">
+            Melhor visualizado em<br><b>Netscape Navigator 4.0</b><br>resolução 800x600
+          </div>
+        </td>
+
+        <td class="main">
+          <div class="box" id="upload">
+            <div class="box-title">:: DESTRUA SUA IMAGEM ::</div>
+            <input type="file" id="file" accept="image/*" hidden>
+            <div class="results">
+              <figure>
+                <figcaption>ANTES 😐</figcaption>
+                <label class="frame dropzone" id="dropzone" for="file" title="Clique ou arraste uma imagem">
+                  <span class="drop-empty">
+                    <span class="drop-icon">📁</span>
+                    <span>Clique aqui, arraste um arquivo ou cole (Ctrl+V)</span>
+                    <span class="small">JPG, PNG, WEBP, GIF (animado também!!!)</span>
+                  </span>
+                  <img id="before" alt="Imagem original">
+                  <span class="drop-swap">🔄 Clique ou arraste para trocar</span>
+                </label>
+                <div class="small info-row"><span id="before-info">&nbsp;</span> <label for="file" class="btn-mini" id="swap" hidden>📁 Trocar imagem</label></div>
+              </figure>
+              <figure>
+                <figcaption>DEPOIS 🤣</figcaption>
+                <div class="frame"><img id="after" alt="Imagem destruída"><span class="placeholder" id="after-ph">aguardando destruição</span></div>
+                <div class="small info-row"><span id="after-info">&nbsp;</span></div>
+              </figure>
+            </div>
+
+            <div class="controls">
+              <div class="slider-row">
+                <span class="small">📷 HD</span>
+                <input type="range" id="level" min="0" max="100" value="70" aria-label="Nível de destruição">
+                <span class="small">🥔 BATATA</span>
+              </div>
+              <div class="level-label">Destruição: <b id="level-value">70</b>% — <span id="level-name"></span></div>
+              <div class="options">
+                <label><input type="checkbox" id="opt-fry"> 🍟 Deep fry (saturação)</label>
+                <label><input type="checkbox" id="opt-noise"> 📺 Ruído de TV</label>
+                <label><input type="checkbox" id="opt-pixel"> 👾 Pixelado</label>
+              </div>
+              <div class="progress" id="progress" hidden><div class="progress-bar" id="progress-bar"></div><span id="progress-text"></span></div>
+              <div class="actions">
+                <button class="btn" id="destroy" disabled>💣 DESTRUIR!!! 💣</button>
+                <a class="btn btn-download" id="download" hidden>💾 BAIXAR LIXO</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="box" id="faq">
+            <div class="box-title">:: FAQ (PERGUNTAS FREQUENTES) ::</div>
+            <p><b>P: Por que alguém faria isso?</b><br>R: Meme em alta qualidade não tem graça. Todo mundo sabe disso.</p>
+            <p><b>P: Minhas imagens são enviadas para algum servidor?</b><br>R: Não. Tudo é destruído aqui mesmo, no seu navegador. Ninguém vê suas vergonhas.</p>
+            <p><b>P: Dá para desfazer?</b><br>R: Não. Esse é o ponto.</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <hr class="rainbow">
+    <footer class="footer">
+      <p>© 2003-<span id="year"></span> F*ck This Image Corp. Todos os direitos destruídos.</p>
+      <p class="small">Feito com Bloco de Notas e muito ódio de pixels ✨ Webmaster: <a href="https://github.com/viniciusNoleto" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/vin%C3%ADcius-nol%C3%AAto-de-ara%C3%BAjo/" target="_blank" rel="noopener">LinkedIn</a></p>
+    </footer>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
